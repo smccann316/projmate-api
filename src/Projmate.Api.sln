@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projmate.Api", "Projmate.Api\Projmate.Api.csproj", "{BCE1B061-9538-41CF-AB32-4D3D8B7E15EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCE1B061-9538-41CF-AB32-4D3D8B7E15EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE1B061-9538-41CF-AB32-4D3D8B7E15EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE1B061-9538-41CF-AB32-4D3D8B7E15EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE1B061-9538-41CF-AB32-4D3D8B7E15EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DF2B861-C4A4-4C8B-834C-C90E4239F01F}
+	EndGlobalSection
+EndGlobal
