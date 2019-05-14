@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Projmate.Api.Filters;
+using Projmate.Api.Infrastructure;
+using Projmate.Api.Models;
+using Projmate.Api.Services;
 
 namespace Projmate.Api
 {
@@ -26,6 +30,8 @@ namespace Projmate.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
+            services.Configure<AccountInfo>(Configuration.GetSection("Info"));
             services.AddMvc(options=>
             { options.Filters.Add<JsonExceptionFilter>(); })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -37,6 +43,10 @@ namespace Projmate.Api
               options.ReportApiVersions = true;
               options.ApiVersionSelector = new CurrentImplementationApiVersionSelector(options);
           });
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddScoped<IProjectService, ProjectService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,9 +58,7 @@ namespace Projmate.Api
             }
 
             
-            app.UseMvc(
-                
-                );
+            app.UseMvc();
         }
     }
 }

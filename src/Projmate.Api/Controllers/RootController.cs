@@ -20,8 +20,13 @@ namespace Projmate.Api.Controllers
                 href = Url.Link(nameof(GetRoot), null),
                 Projects = new
                 {
-                    href = Url.Link(nameof(ProjectsController.GetProjects),null)
+                    href = Url.Link(nameof(ProjectsController.GetProjects), null)
+                },
+                AccountInfo = new
+                {
+                    href = Url.Link(nameof(InfoController.GetAccountInfo), null)
                 }
+
             };
             return Ok(response);
         }

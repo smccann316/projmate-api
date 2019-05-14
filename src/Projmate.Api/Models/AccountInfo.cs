@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 
 namespace Projmate.Api.Models
 {
-    public class Project : Resource
+    public class AccountInfo : Resource
     {
-        public string Title { get; set; }
+        public string Name { get; set; }
+        public string Emnail { get; set; }
         public string Description { get; set; }
-        public DateTime DueDate { get; set; }
-        public string Status { get; set; }
+        public int NumberOfUsers { get; set; }
+
     }
 }
